@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="motel.api">
+		<jta-data-source>java:jboss/datasources/MotelDS</jta-data-source>
+		
+		<class>py.edu.ucsa.motel.api.core.model.Cliente</class>
+		<class>py.edu.ucsa.motel.api.core.model.Dominio</class>
+		<class>py.edu.ucsa.motel.api.core.model.DominioDet</class>
+		<class>py.edu.ucsa.motel.api.core.model.Factura</class>
+		<class>py.edu.ucsa.motel.api.core.model.FacturaDet</class>
+		<class>py.edu.ucsa.motel.api.core.model.Habitacion</class>
+		<class>py.edu.ucsa.motel.api.core.model.HabitacionDet</class>
+		<class>py.edu.ucsa.motel.api.core.model.Pago</class>
+		<class>py.edu.ucsa.motel.api.core.model.Producto</class>
+		<class>py.edu.ucsa.motel.api.core.model.ProductoHabitacion</class>
+		<class>py.edu.ucsa.motel.api.core.model.Promocion</class>
+		<class>py.edu.ucsa.motel.api.core.model.UsoHabitacion</class>
+		<class>py.edu.ucsa.motel.api.core.model.UsoHabitacionDet</class>
+	
+	    <properties>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.archive.autodetection" value="class, hbm"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>
